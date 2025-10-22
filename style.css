@@ -1,0 +1,49 @@
+
+/* style.css - Biru elegan theme with subtle animations */
+:root{
+  --primary:#003366;
+  --accent:#ffc107;
+  --bg:#f8fafc;
+  --muted:#6c757d;
+}
+*{box-sizing:border-box}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:#222;margin:0;line-height:1.6;}
+a{text-decoration:none;}
+.container{max-width:1100px;margin:0 auto;padding:0 20px;}
+.navbar{background:var(--primary);padding:12px 0;color:white;}
+.navbar .brand{font-weight:700;color:white;font-size:1.1rem;}
+.navbar .nav{list-style:none;margin:0;padding:0;display:flex;gap:18px;align-items:center;}
+.navbar .nav a{color:white;opacity:.95;}
+.hero{height:420px;background-position:center;background-size:cover;display:flex;align-items:center;justify-content:center;color:white;text-align:center;position:relative;overflow:hidden;}
+.hero .overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.4));}
+.btn-cta{background:var(--accent);border:none;color:#0b0b0b;padding:12px 20px;border-radius:8px;font-weight:700;box-shadow:0 6px 18px rgba(0,0,0,.12);transition:transform .18s ease}
+.btn-cta:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(0,0,0,.18);}
+
+/* content */
+.section{padding:48px 0;}
+.card{background:#fff;border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(0,0,0,0.06);}
+
+/* Koleksi table */
+.table{width:100%;border-collapse:collapse;margin-top:18px}
+.table th, .table td{padding:10px;border:1px solid #e9eef6}
+.table thead th{background:var(--primary);color:white;text-align:center}
+.table tbody tr:nth-child(even){background:#fbfdff}
+.label-available{color:#0b644b;font-weight:700}
+.label-borrow{color:#a94442;font-weight:700}
+
+/* form styles */
+.form-control{width:100%;padding:10px;border-radius:8px;border:1px solid #dfe9f6;background:white}
+.form-select{padding:10px;border-radius:8px;border:1px solid #dfe9f6}
+
+/* footer */
+footer{background:var(--primary);color:white;padding:18px 0;text-align:center;border-top:4px solid rgba(255,255,255,0.03)}
+
+/* animations */
+.fade-in{animation:fadeIn .8s ease both}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* responsive */
+@media(max-width:768px){
+  .navbar .nav{gap:10px}
+  .hero{height:320px;padding:20px}
+}
